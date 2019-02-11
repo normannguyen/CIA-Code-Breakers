@@ -10,14 +10,14 @@
 //Standard Library
 using namespace::std;
 //Main Function 
-void main()
+int main()
 {
 	//We want to allow our agent to run  this simulation as many times as they need too.
 
 	bool playAgain = false;// This is our flag/ switch to play again or not!
 
 	//Introduction and list of commands
-	cout << "\n\nWelcome to the Code Breaking Simulation."; 
+	cout << "Welcome to the Code Breaking Simulation."; 
 	cout << "\n\nType You're now working for the CIA and we need you to unscramble the words given.";
 	cout << "\nType 'hint' for Hints.";
 	cout << "\nType 'pass' to pass to a different word.";
@@ -34,7 +34,7 @@ void main()
 
 		for (int i = 0; i < 3; i++)
 		{
-			cout << "\nAgent you are on turn #" << i + 1 << " of 3. You got this!" << endl;
+			cout << "\n\nAgent you are on turn #" << i + 1 << " of 3. You got this!" << endl;
 			enum fields { WORD, HINT, NUM_FIELDS };
 			//Change this number to match our new number of word and hints!
 			const int NUM_WORDS = 10;
@@ -101,7 +101,7 @@ void main()
 			}
 		}
 		//This is the choice on whether you want to play again or no.
-		cout << "Would you like to r un the simulation again? (Y/N) ";
+		cout << "Would you like to r un the simulation again? (Y/N): ";
 		char playerChoice;
 		cin >> playerChoice;
 		//Yes
@@ -119,4 +119,5 @@ void main()
 	//Simulation Summary
 	cout << "\nThanks for playing.\n";
 	system("pause");
+	return 0;
 }
